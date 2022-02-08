@@ -1,0 +1,9 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+metadata:
+  name: sock-shop-deploy
+  namespace: wego-system
+resources:
+- app.yaml
+- sock-shop-deploy-gitops-deploy.yaml
+- sock-shop-deploy-gitops-source.yaml
