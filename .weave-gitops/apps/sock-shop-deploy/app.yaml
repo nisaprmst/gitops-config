@@ -1,0 +1,15 @@
+---
+apiVersion: wego.weave.works/v1alpha1
+kind: Application
+metadata:
+  labels:
+    wego.weave.works/app-identifier: wego-6eff025b42b0d8e994a090a2fb860db9
+  name: sock-shop-deploy
+  namespace: wego-system
+spec:
+  branch: master
+  config_url: ssh://git@github.com/nisaprmst/gitops-config.git
+  deployment_type: kustomize
+  path: ./deploy/kubernetes/manifests
+  source_type: git
+  url: ssh://git@github.com/nisaprmst/microservices-demo.git
